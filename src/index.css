@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    background-color: #191919;
+    color: whitesmoke;
+}
+
+.my-navbar a.active {
+    color: #ff05fb;
+}
+
+.my-btn {
+    padding: 10px 15px;
+    font-weight: 600;
+    background-color: #7480ff;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-btn {
+
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-btn:active {
+    transform: scale(1.1);
+}
+
+.my-btn:active {
+    background-color: rgb(91, 104, 245);
+    transform: scale(0.98);
+}
+
+form input {
+    background-color: #191919;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.myText-a {
+    color: whitesmoke;
+}
+
+.myText-b {
+    color: #ff05fb;
+}
+
+.myText-c {
+    color: #7480ff;
+}
+
+.myBg-a {
+    background-color: #191919;
+}
+
+.myBg-b {
+    background-color: #292929;
+}
+
+.myBg-c {
+    background-color: #7480ff;
+}
