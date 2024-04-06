@@ -18,23 +18,23 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result);
+                navigate("/")
             }).catch(error => console.error(error.message))
-        navigate("/")
     }
 
     function handleGooleSignIn() {
         googleSignIn()
             .then(result => {
                 console.log(result);
+                navigate("/")
             }).catch(error => console.error(error.message))
-        navigate("/")
     }
     function handleGithubSignIn() {
         githubSignIn()
             .then(result => {
                 console.log(result);
+                navigate("/")
             }).catch(error => console.error(error.message))
-        navigate("/")
     }
 
     return (

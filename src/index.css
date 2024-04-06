@@ -20,16 +20,14 @@ body {
 
 .my-btn {
     padding: 10px 15px;
-    font-weight: 600;
+    font-weight: 500;
     background-color: #7480ff;
     color: black;
-    font-weight: bold;
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
 }
 
 .btn-btn {
-
     transition: all 0.2s ease-in-out;
 }
 
@@ -37,10 +35,10 @@ body {
     transform: scale(1.1);
 }
 
-.my-btn:active {
+/* .my-btn:active {
     background-color: rgb(91, 104, 245);
     transform: scale(0.98);
-}
+} */
 
 form input {
     background-color: #191919;

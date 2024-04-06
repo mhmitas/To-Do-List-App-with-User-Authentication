@@ -1,5 +1,5 @@
 import { ImRadioUnchecked } from "react-icons/im";
-import { FaRegCheckCircle, FaCircle } from "react-icons/fa";
+import bg_image from '../../../assets/blue-smooth.jpg'
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 
@@ -26,7 +26,7 @@ const Tasks = () => {
     return (
         <div className="w-full josefin-sans">
             <section className=''>
-                <div className="min-h-72 flex items-center justify-center" style={{ backgroundImage: 'url(src/images/bg-desktop-dark.jpg)' }}>
+                <div className="min-h-72 flex items-center justify-center bg-cover" style={{ backgroundImage: `url(${bg_image})` }}>
                     <div className=" w-[500px]">
                         <h3 className="text-2xl font-bold mb-6">T O D O</h3>
                         <form onSubmit={handleAddTask} className="relative shadow-xl rounded-md">
