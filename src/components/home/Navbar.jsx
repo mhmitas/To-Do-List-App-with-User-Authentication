@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { UserContext } from "../../provider/UserProvider";
 import 'react-tooltip/dist/react-tooltip.css'
-import { Tooltip } from 'react-tooltip'
+import { Tooltip } from 'react-tooltip';
+import { FaHome } from 'react-icons/fa'
 
 const Navbar = () => {
     const { user, logOut, isLoading } = useContext(UserContext)
@@ -10,14 +11,16 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     const routes = [
-        { name: 'Home', path: '/', id: 1 },
+        { name: <FaHome className="text-xl" />, path: '/', id: 1 },
         { name: 'Tasks', path: '/tasks', id: 2 },
-        { name: 'Test', path: '/test', id: 14314 },
+        // { name: 'Test', path: '/test', id: 14314 },
     ]
     return (
-        <div className="flex justify-between p-4 font-semibold shadow-xl max-h-[64px] max-w-[1440px] mx-auto">
-            <Link to="/" className="text-xl font-black btn-btn">T O D O</Link >
-            <div className='my-navbar flex flex-wrap gap-4'>
+        <div className="flex justify-between items-center px-4 font-semibold shadow-xl h-[64px]">
+            <button className="btn">
+                <Link to="/" className="text-xl font-black btn-btn">T O D O</Link >
+            </button>
+            <div className='my-navbar flex flex-wrap items-center gap-4'>
                 {
                     routes.map(
                         route => <div key={route.id}><NavLink to={route.path}>{route.name}</NavLink></div>
@@ -39,7 +42,7 @@ const Navbar = () => {
                                     className="my-navbar flex gap-4 text-[#7480ff]">
                                     {
                                         user.photoURL ?
-                                            <img className="w-10 rounded-full border-2 border-[#ff05fb] btn-btn" src={`${user.photoURL}`} alt="" />
+                                            <img className="w-10 rounded-full border-2 border-primary btn-btn" src={`${user.photoURL}`} alt="" />
                                             :
                                             <p> {user.email}</p>
                                     }

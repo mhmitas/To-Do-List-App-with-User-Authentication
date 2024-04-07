@@ -44,7 +44,7 @@ const Login = () => {
         <div>
             <h3 className="text-3xl text-center my-10 font-bold">Please login</h3>
             <div className='flex justify-center my-10'>
-                <div className="w-96 p-8 bg-[#292929] rounded-md *:w-full space-y-6">
+                <div className="w-96 p-8 rounded-md *:w-full space-y-6">
 
                     <form
                         className='*:w-full space-y-6'

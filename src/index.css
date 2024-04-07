@@ -9,15 +9,16 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
-body {
+/* body {
     background-color: #191919;
     color: whitesmoke;
-}
+} */
 
 .my-navbar a.active {
     color: #ff05fb;
 }
 
+/* 
 .my-btn {
     padding: 10px 15px;
     font-weight: 500;
@@ -33,14 +34,14 @@ body {
 
 .btn-btn:active {
     transform: scale(1.1);
-}
+} */
 
 /* .my-btn:active {
     background-color: rgb(91, 104, 245);
     transform: scale(0.98);
 } */
 
-form input {
+/* form input {
     background-color: #191919;
     color: whitesmoke;
     padding: 10px;
@@ -70,4 +71,4 @@ form input {
 
 .myBg-c {
     background-color: #7480ff;
-}
+} */
