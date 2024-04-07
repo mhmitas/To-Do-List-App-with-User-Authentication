@@ -13,7 +13,7 @@ const Profile = () => {
         signOut(auth)
             .then(() => console.log('Sign-out successful.'))
             .catch((error) => console.error(error))
-        navigate("/")
+        // navigate("/")
     }
 
     return (
@@ -37,7 +37,7 @@ const Profile = () => {
                     <div className="">
                         <div className="flex flex-col justify-center max-w-md p-6 shadow-md rounded-xl sm:px-12 myBg-b mx-auto my-20">
                             {
-                                user.photoURL ?
+                                user?.photoURL ?
                                     <img src={`${user.photoURL}`} alt="" className="w-32 myBg-b h-32 mx-auto rounded-full " />
                                     :
                                     <img className="w-32 myBg-b h-32 mx-auto rounded-full" src="profile-avatur.jpeg" alt="avatur" />

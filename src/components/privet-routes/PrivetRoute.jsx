@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../provider/UserProvider';
 import { Audio } from 'react-loader-spinner';
-import { Navigate } from 'react-router-dom';
+import { useLocation, Navigate } from 'react-router-dom';
 
 
 const PrivetRoute = ({ children }) => {
     const { user, isLoading } = useContext(UserContext)
+
+    const location = useLocation()
+    console.log(location);
 
     if (isLoading) {
         return (

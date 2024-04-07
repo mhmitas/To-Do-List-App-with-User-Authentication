@@ -3,7 +3,6 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { UserContext } from "../../provider/UserProvider";
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
-import { Audio } from "react-loader-spinner";
 
 const Navbar = () => {
     const { user, logOut, isLoading } = useContext(UserContext)
@@ -13,6 +12,7 @@ const Navbar = () => {
     const routes = [
         { name: 'Home', path: '/', id: 1 },
         { name: 'Tasks', path: '/tasks', id: 2 },
+        { name: 'Test', path: '/test', id: 14314 },
     ]
     return (
         <div className="flex justify-between p-4 font-semibold shadow-xl max-h-[64px] max-w-[1440px] mx-auto">
@@ -26,8 +26,7 @@ const Navbar = () => {
             </div>
             {isLoading ?
                 <div>
-                    <Audio width='2rem' height="2rem" color="#7480ff" ariaLabel="audio-loading" wrapperStyle={{}} wrapperClass="wrapper-class"
-                    ></Audio>
+                    <h3>Loading...</h3>
                 </div>
                 :
                 <div>

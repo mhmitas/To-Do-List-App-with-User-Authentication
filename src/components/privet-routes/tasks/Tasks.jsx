@@ -9,6 +9,8 @@ const Tasks = () => {
 
     const [tasks, setTasks] = useState([])
     const [taskError, setTaskError] = useState('')
+
+
     function handleAddTask(e) {
         e.preventDefault()
         const task = e.target.task.value

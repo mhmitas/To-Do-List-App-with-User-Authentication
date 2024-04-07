@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { UserContext } from '../../provider/UserProvider';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 
@@ -7,6 +7,9 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 const Login = () => {
 
     const { signInUser, googleSignIn, githubSignIn } = useContext(UserContext)
+
+    const location = useLocation()
+    console.log(location);
 
     const navigate = useNavigate()
 
