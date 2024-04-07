@@ -32,7 +32,12 @@ const Tasks = () => {
                     <div className=" w-2/3 max-w-screen-md flex flex-col gap-4">
                         <h3 className="text-3xl font-bold">T O D O</h3>
                         <form onSubmit={handleAddTask} className="relative shadow-xl rounded-md w-full  text-xl">
-                            <input type="text" name="task" placeholder="Create a new todo..." className="input input-primary bg-base-200 w-full p-8" />
+                            <input
+                                type="text"
+                                name="task"
+                                placeholder="Create a new todo..."
+                                autoFocus="autofocus"
+                                className="input input-primary bg-base-200 w-full p-8" />
                             <button className="absolute top-2 right-3 btn btn-primary text-xl "><FaPlus /></button>
                         </form>
                         {taskError && <div className="badge badge-error">{taskError}</div>}
@@ -44,7 +49,7 @@ const Tasks = () => {
                             tasks.map((task, idx) => <NewTask key={idx} task={task}></NewTask>)
                         }
                         <div className='w-full border-b border-slate-600 p-4 flex items-center gap-4 justify-between'>
-                            <span>5 items left</span>
+                            <span>Total tasks: {tasks.length}</span>
                             <button>All</button>
                             <button>Active</button>
                             <button>Completed</button>
