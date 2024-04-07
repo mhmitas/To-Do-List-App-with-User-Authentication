@@ -24,16 +24,16 @@ const SignUp = () => {
     return (
         <div>
             <h3 className="text-3xl text-center my-10 font-bold">Please Sign up</h3>
-            <div className='flex justify-center my-10'>
+            <div className="max-w-md mx-auto p-10 *:w-full space-y-6">
                 <form
-                    className='w-96 p-8 rounded-md *:w-full space-y-6'
+                    className='*:w-full space-y-6  rounded-md bg-base-200 p-8'
                     onSubmit={handleSignUp}
                 >
-                    <input type="text" name="name" placeholder='Name' />
-                    <input type="text" required name="email" placeholder='Email' />
-                    <input type="text" required name="password" placeholder='Password' />
+                    <input type="text" className='input input-primary' name="name" placeholder='Name' />
+                    <input type="text" className='input input-primary' required name="email" placeholder='Email' />
+                    <input type="text" className='input input-primary' required name="password" placeholder='Password' />
                     <br />
-                    <input type="submit" value="Sign up" className='my-btn' />
+                    <input type="submit" className=' btn btn-primary' value="Sign up" />
                     <p>Already have an account! Please <Link to="/login" className='text-[#7480ff]'><b>Log in</b></Link></p>
 
                 </form>

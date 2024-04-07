@@ -16,49 +16,51 @@ const Navbar = () => {
         // { name: 'Test', path: '/test', id: 14314 },
     ]
     return (
-        <div className="flex justify-between items-center px-4 font-semibold shadow-xl h-[64px]">
-            <button className="btn">
-                <Link to="/" className="text-xl font-black btn-btn">T O D O</Link >
-            </button>
-            <div className='my-navbar flex flex-wrap items-center gap-4'>
-                {
-                    routes.map(
-                        route => <div key={route.id}><NavLink to={route.path}>{route.name}</NavLink></div>
-                    )
-                }
-            </div>
-            {isLoading ?
-                <div>
-                    <h3>Loading...</h3>
-                </div>
-                :
-                <div>
+        <nav className="h-[64px] shadow-xl">
+            <div className="flex justify-between items-center font-semibold h-full px-4  max-w-[1440px] mx-auto ">
+                <button className="btn">
+                    <Link to="/" className="text-xl font-black btn-btn">T O D O</Link >
+                </button>
+                <div className='my-navbar flex flex-wrap items-center gap-4'>
                     {
-                        user ?
-                            <Link to='/profile'>
-                                <div
-                                    data-tooltip-id="my-tooltip"
-                                    data-tooltip-content="Profile"
-                                    className="my-navbar flex gap-4 text-[#7480ff]">
-                                    {
-                                        user.photoURL ?
-                                            <img className="w-10 rounded-full border-2 border-primary btn-btn" src={`${user.photoURL}`} alt="" />
-                                            :
-                                            <p> {user.email}</p>
-                                    }
-                                    {/* <button onClick={handleLogOut}>Log out</button> */}
-                                    <Tooltip id="my-tooltip" />
-                                </div>
-                            </Link>
-                            :
-                            <div className="my-navbar flex gap-4 text-[#7480ff]">
-                                <NavLink to="/login">Login</NavLink>
-                                {/* <NavLink to="/sign-up">Sign up</NavLink> */}
-                            </div>
+                        routes.map(
+                            route => <div key={route.id}><NavLink to={route.path}>{route.name}</NavLink></div>
+                        )
                     }
                 </div>
-            }
-        </div >
+                {isLoading ?
+                    <div>
+                        <h3>Loading...</h3>
+                    </div>
+                    :
+                    <div>
+                        {
+                            user ?
+                                <Link to='/profile'>
+                                    <div
+                                        data-tooltip-id="my-tooltip"
+                                        data-tooltip-content="Profile"
+                                        className="my-navbar flex gap-4 text-[#7480ff]">
+                                        {
+                                            user.photoURL ?
+                                                <img className="w-10 rounded-full border-2 border-primary btn-btn" src={`${user.photoURL}`} alt="" />
+                                                :
+                                                <p> {user.email}</p>
+                                        }
+                                        {/* <button onClick={handleLogOut}>Log out</button> */}
+                                        <Tooltip id="my-tooltip" />
+                                    </div>
+                                </Link>
+                                :
+                                <div className="my-navbar flex gap-4 text-[#7480ff]">
+                                    <NavLink to="/login">Login</NavLink>
+                                    {/* <NavLink to="/sign-up">Sign up</NavLink> */}
+                                </div>
+                        }
+                    </div>
+                }
+            </div >
+        </nav>
     )
 
 };

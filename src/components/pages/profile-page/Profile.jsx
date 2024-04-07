@@ -49,9 +49,9 @@ const Profile = () => {
                                 </div>
                                 {/* buttons */}
                                 <div className="flex justify-center pt-2 space-x-4 align-center">
-                                    <button className='my-btn' onClick={handleLogOut}>Log out</button>
+                                    <button className='btn' onClick={handleLogOut}>Log out</button>
                                     <Link to="/login">
-                                        <button className='my-btn'>Login to another account</button>
+                                        <button className='btn'>Login to another account</button>
                                     </Link>
                                 </div>
                             </div>

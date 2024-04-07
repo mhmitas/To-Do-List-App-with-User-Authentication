@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Root = () => {
     return (
-        <div className=' max-w-[1440px] mx-auto'>
+        <div className=''>
             <Navbar></Navbar>
             <div className='max-w-[1440px] mx-auto'>
                 <Outlet></Outlet>

@@ -20,8 +20,8 @@ const Home = () => {
                         <h3 className='text-2xl font-semibold'>Focus on your day</h3>
                         <p>Get thinks done with TODO, <br />a list that refreshes every day</p>
                         <br />
-                        <Link to="/tasks">
-                            <button className='my-btn'>Add a task</button>
+                        <Link className='btn' to="/tasks">
+                            <button>Add a task</button>
                         </Link>
                     </div>
                 </section>
